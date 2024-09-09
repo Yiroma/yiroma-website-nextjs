@@ -1,4 +1,5 @@
-// SVGIcons.js
+import { motion } from "framer-motion";
+
 export const BiographySign = () => (
   <svg width="124" height="64" viewBox="0 0 477 245" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -25,7 +26,10 @@ export const BiographySign = () => (
 );
 
 export const ScrollIcon = () => (
-  <svg
+  <motion.svg
+    initial={{ opacity: 0.2, y: 0 }}
+    animate={{ opacity: 1, y: "10px" }}
+    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
     width="48px"
     height="48px"
     viewBox="0 0 24 24"
@@ -53,5 +57,5 @@ export const ScrollIcon = () => (
       stroke-linecap="round"
       stroke-linejoin="round"
     />
-  </svg>
+  </motion.svg>
 );
